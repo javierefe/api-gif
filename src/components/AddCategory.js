@@ -42,6 +42,7 @@ export const AddCategory = ({setCategories}) => {
             <input 
                 type="text"
                 value={ intputValue }
+                placeholder="Busca tu gif..."
                 onChange={handleInputChange}
             />
             {/* <button onClick={handleAdd}>Agregar</button> */}
