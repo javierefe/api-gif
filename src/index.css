@@ -12,15 +12,13 @@ input{
   width: 100%;
 }
 
-button{
-  background-color: yellow;
-}
 .card-grid {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 .card{
+  background-color: rgb(110, 109, 109);
   align-content: center;
   border: 1px solid grey;
   border-radius: 6px;

@@ -12,6 +12,7 @@ export const GifGrid = ({category}) => {
     const {data:images, loading} = useFetchGifs(category);
     // console.log(loading)
     
+    
 
     // solo se ejecuta getGifs cuando el componente es renderizado
     // por primera vez

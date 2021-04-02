@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {GifExpertApp} from './GifExpertApp';
+// import {lightTheme, darkTheme, GlobalStyles} from './themes.js';
+
 
 import './index.css';
 

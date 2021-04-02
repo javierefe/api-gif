@@ -39,13 +39,20 @@ export const AddCategory = ({setCategories}) => {
     return (
         
         <form onSubmit={handleSubmit}>
-            <input 
+            {/* <input 
                 type="text"
                 value={ intputValue }
                 placeholder="Busca tu gif..."
                 onChange={handleInputChange}
-            />
+            /> */}
             {/* <button onClick={handleAdd}>Agregar</button> */}
+            <div className="input-group mb-3">
+                <div className="input-group-prepend">
+                    <span className="input-group-text btn btn-success">Buscador</span>
+                </div>
+                <input type="text" value={ intputValue } onChange={handleInputChange} className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"></input>
+            </div>
+            
 
         </form>
        
