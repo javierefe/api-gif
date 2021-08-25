@@ -1,5 +1,6 @@
 import React from 'react'
 
+// en ls props hago una desestructuracion de objetos
 export const GifGridItem = ({id, title, url}) => {
 
     return (

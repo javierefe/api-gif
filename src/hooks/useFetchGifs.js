@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import { getGifs } from '../helpers/getGifs';
 
 export const useFetchGifs = (category) => {
@@ -10,18 +10,16 @@ export const useFetchGifs = (category) => {
 
     // los efectos no pueden ser async
   
-    getGifs(category)
-    .then(img => {
-        
-            
-                
-            setState({
+    useEffect(() => {
+        getGifs(category)
+            .then(img => { 
+                setState({
                 data : img,
                 loading : false
-            });
-
-            
-    })
+            });    
+        })
+    },[category])
+    
    // solo se evalua este efecto cuando la categoria cambia
 
     return state;
