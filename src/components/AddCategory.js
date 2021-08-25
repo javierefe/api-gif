@@ -17,7 +17,11 @@ export const AddCategory = ({setCategories}) => {
 
         // es una validacion para vacios y ademas borra el inputValue
         if(intputValue.trim().length > 2){
+
+            // cats son las cateogrias que ya tenia en el estado, con soolo mandar la referencia
+            // de setcategories ya manda ese categories
             setCategories(cats => [intputValue, ...cats]);
+            // se borra y evita el libre posteo (se borra el que ese ese momento , no todo el estado)
             setintputValue('');
         }
     }
@@ -50,11 +54,20 @@ export const AddCategory = ({setCategories}) => {
                 <div className="input-group-prepend">
                     <span className="input-group-text btn btn-success">Buscador</span>
                 </div>
-                <input type="text" value={ intputValue } onChange={handleInputChange} className="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"></input>
+                <input 
+                    type="text" 
+                    value={ intputValue } 
+                    onChange={handleInputChange} 
+                    className="form-control" 
+                    aria-label="Sizing example input" 
+                    aria-describedby="inputGroup-sizing-default"
+                >
+                </input>
             </div>
             
 
         </form>
+        
        
         
     )

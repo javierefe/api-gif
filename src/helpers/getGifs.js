@@ -4,16 +4,16 @@ export const getGifs = async(category) => {
     const url = `https://api.giphy.com/v1/gifs/search?q=${encodeURI(category)}&limit=10&api_key=2hvXk2v8sfRYdbMhUWuhF0y0aIr3jQ2O`
     const resp = await fetch(url);
     const {data} = await resp.json();
-    
+    console.log(data)
     const gifs = data.map( img => {
 
         return {
             id: img.id,
             title: img.title,
-            url: img.images?.downsized_medium.url // ? comprueba si todas las imagenes tienen url
+            url: img.images?.downsized_medium.url // ? comprueba si todas las imagenes tienen url, osea si viene una imagen lo utilizo
         }
     })
-    console.log(gifs);
+    // console.log(gifs);
     
     return gifs;
 }

@@ -12,8 +12,6 @@ export const GifGrid = ({category}) => {
     const {data:images, loading} = useFetchGifs(category);
     // console.log(loading)
     
-    
-
     // solo se ejecuta getGifs cuando el componente es renderizado
     // por primera vez
     // useEffect(() => {
@@ -21,7 +19,6 @@ export const GifGrid = ({category}) => {
     //         .then(img => setImages(img) )
     // }, [category]) // si la cateogria cambia vuelve a ejecutar el use effetc
 
-   
     return (
         <>
             <h3>{category}</h3>
